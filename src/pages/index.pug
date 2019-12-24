@@ -1,0 +1,228 @@
+include components/header.pug
+
+section.main-header
+  .row.justify-content-between
+    .col-auto
+      a.main-header_logo(href="#")
+        .logo_img
+          img(src="img/logo-bardo-full.png")
+    .col-auto
+      .main-header_contact.text-right
+        p.contact_phone +7 342 214-24-39
+        p.contact_time 09:00-18:00
+  .row
+    .main-header_title
+      h1 Центр обучения, обслуживания <br> и автоматизации
+  .row
+    .col-auto
+      button.btn.btn-inform.shadow(type="submit") СВЯЗАТЬСЯ
+    .col
+      .main-header_subtitle с 1997 года занимаемся 1с
+main.container-fluid
+  section.about
+    .row
+      .about_title
+        h1 Мы являемся партнером 1С в Пермском крае
+    .row
+      .about_subtitle
+        p у нас вы получите:
+    .row
+      .about_slider
+        .slider_item
+          .box
+            .box_image(style="margin: 1rem 1rem 0.8rem 1.35rem;")
+              i(class="las la-hands-helping")
+            .box_title
+              h5 Бесплатную помощь
+            .box_desc 
+              p в подборе программ для автоматизации учета на вашем предприятии
+        .slider_item
+          .box
+            .box_image(style="margin: 1rem 1rem 0.8rem 1.9rem;")
+              include ../img/icon/1C-bordo.svg
+            .box_title
+              h5 Любой
+            .box_desc программный продукт 1c
+        .slider_item
+          .box
+            .box_image(style="margin: 1rem 1rem 0.8rem 1.35rem;")
+              i(class="las la-laptop-code")
+            .box_title
+              h5 Бесплатную установку
+            .box_desc и первичную настройку программы для начальной работы
+        .slider_item
+          .box
+            .box_image(style="margin: 1rem 1rem 0.8rem 0.85rem;")
+              i(class="las la-headset")
+            .box_title
+              h5 Консультации
+            .box_desc и техническую поддержку в работе с программами 1С
+        .slider_item
+          .box
+            .box_image(style="margin: 1rem 1rem 0.8rem 0.55rem;")
+              i(class="las la-book")
+            .box_title
+              h5 Обучение на курсах
+            .box_desc разработанных Фирмой «1С» с получением индивидуального свидетельства
+  section.project
+    .row
+      .project_title
+        h1 Наши последние проекты
+    .row
+      .wrapper.overflow-auto
+        .box-1.h-100
+          .box_content
+            .box_desc
+              p Внедрение программного продукта <b>"1С:Бухгалтерия 8 ПРОФ"</b> в ООО "РАДАР"
+            .box_date
+              p Июль 2019
+        .box-2.h-100
+          .box_content
+            .box_desc
+              p Внедрение программного продукта <b>"1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК. Базовая версия"</b>. в ТСЖ "Куфонина,19"
+            .box_date
+              p Июнь 2019
+        .box-3.h-100
+          .box_content
+            .box_desc(style='font-size: 14px')
+              p Внедрение программного продукта <b>"1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК. Базовая версия"</b> в ТСЖ "Парковый, 29"
+            .box_date
+              p Июнь 2019
+        .box-4.h-100
+          .box_content
+            .box_desc(style='font-size: 14px')
+              p Внедрение программного продукта <b>"1С:Медицина. Поликлиника"</b> в ГБУЗ ПК «Городская клиническая поликлиника №2»
+            .box_date
+              p Апрель 2019
+        .box-5.h-100
+          .box_content
+            .box_desc
+              p Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО "УПРАВЛЕНИЕ МЕХАНИЗАЦИИ"
+            .box_date
+              p Март 2019
+        .box-6.h-100
+          .box_content
+            .box_desc
+              p Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО"ЦЕНТРРЕМОНТ"
+            .box_date
+              p Март 2019
+        .box-7.h-100
+          .box_content
+            .box_desc
+              p Внедрение программного продукта <b>"1С:Розница. Базовая версия"</b> у КФХ Бельчановой Елены Борисовны
+            .box_date
+              p Март 2019
+        .box-8.h-100
+          .box_content
+            .box_desc(style='font-size: 14px')
+              p Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО "СРК "ТИТАН"
+            .box_date
+              p Март 2019
+        .box-9.h-100
+          .box_content
+            .box_desc(style='font-size: 14px')
+              p Внедрение программного продукта <b>"1С:Зарплата и управление персоналом 8. Базовая версия"</b> в ПОУ "ПЕРМСКАЯ АВТОШКОЛА ДОСААФ РОССИИ № 2"
+            .box_date
+              p Март 2019
+        .box-10.h-100
+          .box_content
+            .box_desc
+              h3
+                a(href="http://1c.ru/rus/partners/solutions/solutions.jsp?PartID_ID=5280&parts=1") Еще
+  section.course
+    .row
+      .course_title
+        h1 Обучающие курсы
+    .row
+      .course_item.col-2
+        .course_item_title
+          h5 1C: Предприятие 8
+        .course_price
+          p 3500 - 4500 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-2
+        .course_title
+          h5 1С: Бухгалтерия 8
+        .course_price
+          p 2000 - 12500 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-2
+        .course_title
+          h5 1С: Управление торговлей 8
+        .course_price
+          p 5200 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-2
+        .course_title
+          h5 1С: Комплексная автоматизация 8
+        .course_price
+          p 4000 - 4500 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-2
+        .course_title
+          h5 1С: Управление нашей фирмой 8
+        .course_price
+          p 3500 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-auto(style="max-width: 340px")
+        .course_title
+          h5 1С: Зарплата и управление персоналом 3.1
+        .course_price
+          p 3000 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+      .course_item.col-2
+        .course_title
+          h5 Для школьников
+        .course_price
+          p 6780 руб.
+        .course_link
+          a(href="https://ya.ru") Подробнее
+  section.contact
+    .row
+      .contact_title
+        h1 Где нас найти
+    .row
+      .contact_subtitle
+        .place  
+          p Пермь, Екатерининская, 141
+        .time
+          p режим работы:
+          p 09:00-18:00 (пн-чт)
+          p 09:00-17:00 (пт)
+    .row
+      .map
+        .map_entry
+          img(src="img/entry.png" alt="вход")
+        .map_sheme#map
+          img(src="img/map.png", alt="map")
+  section.team
+    .row
+      h1 Наша команда
+    .row
+      .team_item.col
+        img(src="img/team/person 1.png" alt="1")
+      .team_item.col
+        img(src="img/team/person 2.png" alt="2")
+      .team_item.col
+        img(src="img/team/person 3.png" alt="3")
+      .team_item.col
+        img(src="img/team/person 4.png" alt="4")
+      .team_item.col
+        img(src="img/team/person 5.png" alt="5")
+  section.status
+    .row
+      h1 Статусы
+    .row
+      .status_item.col 1
+      .status_item.col 2
+      .status_item.col 3
+      .status_item.col 4
+      .status_item.col 5
+
+include components/footer.pug

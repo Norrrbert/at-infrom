@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>at-inform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head><body>
+<header class="hidden-navbar fixed-top" id="header" :class="{'header': showNavbar}">
+  <div class="row">
+    <div class="col-sm-auto"><a class="header_logo" href="#">
+        <div class="logo_img"><img src="img/logo.png"></div>
+        <div class="logo_title py-2 px-3">
+          <h4>АТ-ИНФОРМ</h4>
+        </div></a></div>
+    <div class="col-sm-auto col-md flex-shrink-1">
+      <div class="row">
+        <div class="col-sm-12 col-md flex-shrink-1">
+          <nav nav navbar-expand-lg>
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="#">Обучение</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Сопровождение</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Продажа</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-sm-12 col-md-auto">
+          <div class="header_contact text-right">
+            <p class="contact_phone">+7 342 214-24-39 </p>
+            <p class="contact_status"><b>&#9679;</b>  сейчас {{work}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="main-header">
+  <div class="row justify-content-between">
+    <div class="col-auto"><a class="main-header_logo" href="#">
+        <div class="logo_img"><img src="img/logo-bardo-full.png"></div></a></div>
+    <div class="col-auto">
+      <div class="main-header_contact text-right">
+        <p class="contact_phone">+7 342 214-24-39</p>
+        <p class="contact_time">09:00-18:00</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="main-header_title">
+      <h1>Центр обучения, обслуживания <br> и автоматизации</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-auto">
+      <button class="btn btn-inform shadow" type="submit">СВЯЗАТЬСЯ</button>
+    </div>
+    <div class="col">
+      <div class="main-header_subtitle">с 1997 года занимаемся 1с</div>
+    </div>
+  </div>
+</section>
+<main class="container-fluid">
+  <section class="about">
+    <div class="row">
+      <div class="about_title">
+        <h1>Мы являемся партнером 1С в Пермском крае</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="about_subtitle">
+        <p>у нас вы получите:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="about_slider">
+        <div class="slider_item">
+          <div class="box">
+            <div class="box_image" style="margin: 1rem 1rem 0.8rem 1.35rem;"><i class="las la-hands-helping"></i></div>
+            <div class="box_title">
+              <h5>Бесплатную помощь</h5>
+            </div>
+            <div class="box_desc"> 
+              <p>в подборе программ для автоматизации учета на вашем предприятии</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider_item">
+          <div class="box">
+            <div class="box_image" style="margin: 1rem 1rem 0.8rem 1.9rem;"><?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 144 70" width="144pt" height="70pt"><defs><clipPath id="_clipPath_HdMpxybrnIa2PwbG8gYKIB9su3hMfu49"><rect width="144" height="70"/></clipPath></defs><g clip-path="url(#_clipPath_HdMpxybrnIa2PwbG8gYKIB9su3hMfu49)"><path d=" M 74.532 60.688 C 71.757 60.503 68.556 60.016 66.031 59.286 C 65.558 59.149 63.6 58.43 63.102 58.201 C 54.313 54.133 48.19 45.252 48.19 34.949 C 48.19 20.817 59.695 9.306 73.847 9.306 C 87.873 9.306 99.301 20.62 99.497 34.593 L 108.767 34.593 C 108.57 15.516 92.986 0.055 73.847 0.055 C 54.594 0.055 38.923 15.705 38.923 34.949 C 38.923 48.215 46.389 59.754 57.322 65.649 C 59.295 66.692 62.129 67.767 63.09 68.062 C 66.207 68.989 70.032 69.605 73.436 69.863 C 74.592 69.95 78.629 69.996 79.806 70 L 143.636 70 L 143.636 60.774 L 79.913 60.774 C 79.065 60.774 75.362 60.742 74.532 60.688 Z  M 79.913 46.202 C 79.239 46.202 75.714 46.179 75.062 46.124 C 73.959 46.031 72.36 45.866 71.332 45.631 C 70.171 45.32 69.081 44.91 68.59 44.64 C 65.147 42.779 62.8 39.14 62.8 34.949 C 62.8 28.851 67.742 23.906 73.847 23.906 C 79.824 23.906 84.683 28.657 84.878 34.593 L 93.784 34.593 C 93.596 23.748 84.75 15.009 73.847 15.009 C 62.823 15.009 53.888 23.935 53.888 34.949 C 53.888 42.715 58.343 49.423 64.831 52.708 C 65.83 53.293 67.708 53.905 68.243 54.044 C 70.075 54.526 72.536 54.854 74.532 55.001 C 75.27 55.062 78.885 55.09 79.648 55.094 L 79.648 55.108 L 143.634 55.108 L 143.634 46.202 L 79.913 46.202 Z  M 33.211 69.966 L 23.88 69.966 L 23.88 9.326 L 10.245 9.326 L 10.245 0 L 33.211 0 L 33.211 69.966 Z  M 0 13.986 L 0 22.954 L 10.245 22.954 L 10.245 69.966 L 19.21 69.966 L 19.21 13.986 L 0 13.986 Z " /></g></svg></div>
+            <div class="box_title">
+              <h5>Любой</h5>
+            </div>
+            <div class="box_desc">программный продукт 1c</div>
+          </div>
+        </div>
+        <div class="slider_item">
+          <div class="box">
+            <div class="box_image" style="margin: 1rem 1rem 0.8rem 1.35rem;"><i class="las la-laptop-code"></i></div>
+            <div class="box_title">
+              <h5>Бесплатную установку</h5>
+            </div>
+            <div class="box_desc">и первичную настройку программы для начальной работы</div>
+          </div>
+        </div>
+        <div class="slider_item">
+          <div class="box">
+            <div class="box_image" style="margin: 1rem 1rem 0.8rem 0.85rem;"><i class="las la-headset"></i></div>
+            <div class="box_title">
+              <h5>Консультации</h5>
+            </div>
+            <div class="box_desc">и техническую поддержку в работе с программами 1С</div>
+          </div>
+        </div>
+        <div class="slider_item">
+          <div class="box">
+            <div class="box_image" style="margin: 1rem 1rem 0.8rem 0.55rem;"><i class="las la-book"></i></div>
+            <div class="box_title">
+              <h5>Обучение на курсах</h5>
+            </div>
+            <div class="box_desc">разработанных Фирмой «1С» с получением индивидуального свидетельства</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project">
+    <div class="row">
+      <div class="project_title">
+        <h1>Наши последние проекты</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="wrapper overflow-auto">
+        <div class="box-1 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <p>Внедрение программного продукта <b>"1С:Бухгалтерия 8 ПРОФ"</b> в ООО "РАДАР"</p>
+            </div>
+            <div class="box_date">
+              <p>Июль 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-2 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <p>Внедрение программного продукта <b>"1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК. Базовая версия"</b>. в ТСЖ "Куфонина,19"</p>
+            </div>
+            <div class="box_date">
+              <p>Июнь 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-3 h-100">
+          <div class="box_content">
+            <div class="box_desc" style="font-size: 14px">
+              <p>Внедрение программного продукта <b>"1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК. Базовая версия"</b> в ТСЖ "Парковый, 29"</p>
+            </div>
+            <div class="box_date">
+              <p>Июнь 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-4 h-100">
+          <div class="box_content">
+            <div class="box_desc" style="font-size: 14px">
+              <p>Внедрение программного продукта <b>"1С:Медицина. Поликлиника"</b> в ГБУЗ ПК «Городская клиническая поликлиника №2»</p>
+            </div>
+            <div class="box_date">
+              <p>Апрель 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-5 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <p>Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО "УПРАВЛЕНИЕ МЕХАНИЗАЦИИ"</p>
+            </div>
+            <div class="box_date">
+              <p>Март 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-6 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <p>Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО"ЦЕНТРРЕМОНТ"</p>
+            </div>
+            <div class="box_date">
+              <p>Март 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-7 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <p>Внедрение программного продукта <b>"1С:Розница. Базовая версия"</b> у КФХ Бельчановой Елены Борисовны</p>
+            </div>
+            <div class="box_date">
+              <p>Март 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-8 h-100">
+          <div class="box_content">
+            <div class="box_desc" style="font-size: 14px">
+              <p>Внедрение программного продукта <b>"1С:Бухгалтерия 8. Базовая версия"</b> в ООО "СРК "ТИТАН"</p>
+            </div>
+            <div class="box_date">
+              <p>Март 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-9 h-100">
+          <div class="box_content">
+            <div class="box_desc" style="font-size: 14px">
+              <p>Внедрение программного продукта <b>"1С:Зарплата и управление персоналом 8. Базовая версия"</b> в ПОУ "ПЕРМСКАЯ АВТОШКОЛА ДОСААФ РОССИИ № 2"</p>
+            </div>
+            <div class="box_date">
+              <p>Март 2019</p>
+            </div>
+          </div>
+        </div>
+        <div class="box-10 h-100">
+          <div class="box_content">
+            <div class="box_desc">
+              <h3><a href="http://1c.ru/rus/partners/solutions/solutions.jsp?PartID_ID=5280&amp;parts=1">Еще</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="course">
+    <div class="row">
+      <div class="course_title">
+        <h1>Обучающие курсы</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="course_item col-2">
+        <div class="course_item_title">
+          <h5>1C: Предприятие 8</h5>
+        </div>
+        <div class="course_price">
+          <p>3500 - 4500 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-2">
+        <div class="course_title">
+          <h5>1С: Бухгалтерия 8</h5>
+        </div>
+        <div class="course_price">
+          <p>2000 - 12500 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-2">
+        <div class="course_title">
+          <h5>1С: Управление торговлей 8</h5>
+        </div>
+        <div class="course_price">
+          <p>5200 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-2">
+        <div class="course_title">
+          <h5>1С: Комплексная автоматизация 8</h5>
+        </div>
+        <div class="course_price">
+          <p>4000 - 4500 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-2">
+        <div class="course_title">
+          <h5>1С: Управление нашей фирмой 8</h5>
+        </div>
+        <div class="course_price">
+          <p>3500 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-auto" style="max-width: 340px">
+        <div class="course_title">
+          <h5>1С: Зарплата и управление персоналом 3.1</h5>
+        </div>
+        <div class="course_price">
+          <p>3000 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+      <div class="course_item col-2">
+        <div class="course_title">
+          <h5>Для школьников</h5>
+        </div>
+        <div class="course_price">
+          <p>6780 руб.</p>
+        </div>
+        <div class="course_link"><a href="https://ya.ru">Подробнее</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="row">
+      <div class="contact_title">
+        <h1>Где нас найти</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="contact_subtitle">
+        <div class="place"> 
+          <p>Пермь, Екатерининская, 141</p>
+        </div>
+        <div class="time">
+          <p>режим работы:</p>
+          <p>09:00-18:00 (пн-чт)</p>
+          <p>09:00-17:00 (пт)</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="map">
+        <div class="map_entry"><img src="img/entry.png" alt="вход"></div>
+        <div class="map_sheme" id="map"><img src="img/map.png" alt="map"></div>
+      </div>
+    </div>
+  </section>
+  <section class="team">
+    <div class="row">
+      <h1>Наша команда</h1>
+    </div>
+    <div class="row">
+      <div class="team_item col"><img src="img/team/person 1.png" alt="1"></div>
+      <div class="team_item col"><img src="img/team/person 2.png" alt="2"></div>
+      <div class="team_item col"><img src="img/team/person 3.png" alt="3"></div>
+      <div class="team_item col"><img src="img/team/person 4.png" alt="4"></div>
+      <div class="team_item col"><img src="img/team/person 5.png" alt="5"></div>
+    </div>
+  </section>
+  <section class="status">
+    <div class="row">
+      <h1>Статусы</h1>
+    </div>
+    <div class="row">
+      <div class="status_item col">1</div>
+      <div class="status_item col">2</div>
+      <div class="status_item col">3</div>
+      <div class="status_item col">4</div>
+      <div class="status_item col">5</div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 colsm-3 col-xs-12">
+        <div class="footer_logo"><img src="img/logo.png" alt="logo">
+          <h5 class="my-auto mx-3">АТ-ИНФОРМ</h5>
+        </div>
+      </div>
+      <div class="footer_menu col-sm col-xs-12 flex-sm-shrink-1">
+        <div class="row">
+          <div class="col-sm-3 col-xs-12">
+            <ul>
+              <li>Программы фирмы 1С</li>
+              <li>Книги 1С</li><br>
+              <li>Что такое ЦСО</li>
+              <li>Перечень курсов</li>
+            </ul>
+          </div>
+          <div class="col-sm-5 col-xs-12">
+            <ul>
+              <li>Сопровождение пользователей программы 1С</li><br>
+              <li>Стоимость сопровождения пользователей программ 1С</li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <ul>
+              <li>Отзывы</li>
+              <li>Статьи</li><br>
+              <li>Политика конфиденциальности</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-auto col-xs-12">
+        <div class="email"><b>e-mail: info@atperm.ru</b></div>
+        <div class="social_group">
+          <div class="row">
+            <div class="social_item"><i class="lab la-vk"></i></div>
+            <div class="social_item"><i class="lab la-instagram"></i></div>
+            <div class="social_item"><i class="lab la-facebook-square"></i></div>
+            <div class="social_item"><i class="lab la-youtube-square"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-lg-3">
+        <div class="copyrights" id="copyrights">
+          <p>© 1997-{{year}}. ГК «АТ-информ».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/header.js"></script>
+</footer></body>
+</html>

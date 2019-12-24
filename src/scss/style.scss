@@ -1,0 +1,478 @@
+//@import 'normalize.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu:400,500,700&display=swap&subset=cyrillic');
+
+@mixin ubuntu-font{
+  font-family: 'Ubuntu', sans-serif;
+}
+@mixin roboto-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+//rgb(36, 36, 36);
+$backcolor: #F3F3F5;
+$brandcolor: #9B2D30; 
+$brandcolor_darky: #800000;
+
+html,body {
+  overflow-x: hidden;
+
+  max-width: 100%;
+  min-width: 320px;
+
+  max-height: 100%;
+
+  margin: 0;
+}
+
+body {
+  @include roboto-font;
+  background-color: $backcolor;
+  
+  color: #000;
+}
+
+header {
+  background-color: $brandcolor_darky;
+  max-height: 80px;  
+}
+
+footer {
+  color: #fff;
+  background-color: $brandcolor_darky;
+}
+
+h1 {
+  @include ubuntu-font;
+  font-weight: 600;
+}
+img {
+  max-height: inherit;
+}
+
+main {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: inherit;
+  
+}
+
+.hidden-navbar {
+  transition: .3s all ease-out;
+  transform: translate3d(0, -100%, 0);
+}
+.header {
+  transition: .3s all ease-out;
+  transform: translate3d(0, 0, 0);
+  padding: 1rem;
+
+  &_logo {
+    display: flex;
+    &:hover {text-decoration: none;}
+    .logo_img {
+      max-height: 44px;
+    }
+    .logo_title {
+      @include roboto-font;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+
+  .nav {
+    a {
+      color: #fff;
+      &:hover {
+        border-bottom: 2px solid #fff;
+        padding: 0.25rem 1rem;
+        transition: .3s all ease-out;
+      }
+    }
+  }
+
+  &_contact {
+    color: #fff;
+    p{margin:0}
+    .contact_phone {
+      margin-bottom: 0rem;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact_status {
+      font-size: 13px;
+      font-weight: 400;
+      opacity: .65;
+      b{
+        padding: 1px 4px;
+      }
+    }
+  }
+}
+
+.test {
+  max-width: 70%;
+}
+
+.main-header {
+  max-width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.603);
+  color: #fff;
+  position: relative;
+  padding: 2rem 4rem;
+
+  &:after {
+    content: "";
+    background: url(../img/cabinet.jpg) center center no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  &_logo {
+    display: flex;
+    padding: 2.5rem 0rem;
+  
+    .logo_img {
+      max-height: 100px;
+      margin: auto 0rem;
+    }
+
+  }
+  &_contact {
+    .contact_phone {
+      margin-bottom: 0rem;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact_time {
+      font-size: 13px;
+      font-weight: 400;
+      opacity: .65
+    }
+  }
+
+  &_title {
+    padding: 10rem 0rem 4rem 15px;
+    opacity: .95;
+    h1{
+      font-size: 65px;
+      font-weight: 500;
+    }
+  }
+
+  &_subtitle {
+    @include roboto-font;
+    font-weight: 400;
+    color: #DCDCDC;
+    font-size: 20px;
+    margin: 0.6rem 2rem;
+    vertical-align: middle;
+  }
+
+}
+.btn-inform {
+  color: #fff;
+  font-weight: 500;
+  background-color: $brandcolor;
+  padding: 0.8rem 2rem;
+  font-size: 14px;
+  border-radius: 0rem;
+}
+
+
+.about {
+  position: relative;
+  padding: 5rem 3rem;
+  &_title {
+    h1 {margin: 0}
+  }
+  &_subtitle {
+    @include ubuntu-font();
+    font-size: 24px;
+    margin: 0 0.15rem;
+  }
+  &_slider {
+    display: flex;
+    box-sizing: border-box;
+    overflow-x: auto;
+    
+    margin: 2rem 0;
+    .slider_item {
+      background-color: #fff;
+      margin: 0rem 1rem 2rem 0rem;
+      min-width: 285px;
+      min-height: 282px;
+      display: block;
+
+      .box {
+        &_image {
+          .las {
+            font-size: 120px;
+            color: $brandcolor;
+          }
+          svg {
+            fill: $brandcolor;
+            height: 120px;
+            width: 150px;
+          }
+        }
+        &_title {
+          h5 {
+            font-weight: 600;
+          }
+          margin: 0 2rem;
+        }
+        &_desc {
+          font-size: 15px;
+          margin: 0 2rem;
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      height: 3px;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color:#dfdfdf;
+      border-radius: 10px;
+      width: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #808080;
+      height: 6px;
+      border-radius: 8px;
+      border: 3px solid #4d4d4d;
+      --webkit-border-radius: 1ex;
+      --webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+    }
+    
+  }
+}
+
+.project {
+  padding: 0rem 3rem;
+
+  &_title {
+    margin: 0rem 0rem 3rem 0rem;
+  }
+
+  .wrapper {
+    
+    padding: 0rem 1rem 1rem 0rem;
+
+    display: grid;
+    grid-auto-flow: row dense;
+    
+    grid-auto-columns: 200px;
+    grid-gap: 1rem;
+
+    &:hover {
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  
+  }
+  @for $i from 1 through 10 {
+    .box-#{$i} {
+      grid-area: box-#{$i};
+    }
+  }
+  .box_content {
+    background-color: $brandcolor;
+    color: #fff;
+    padding: 2rem;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .box_desc {
+    
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.course {
+  padding: 5rem 3rem 0rem 3rem;
+  &_title {
+    margin: 0rem 0rem 3rem 0rem;
+  }
+
+  &_item {
+    background-color: #fff;
+    margin: 0rem 1rem 2rem 0rem;
+    padding: 2.5rem;
+    min-width: 285px;
+    min-height: 282px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    &_title {
+      min-height: 56px;
+    }
+  }
+  
+  &_price {
+    //margin: 2rem 0rem;
+    font-size: 17px;
+  }
+  &_link {
+    text-decoration: underline;
+  }
+}
+
+.contact {
+  padding: 5rem 3rem;
+  &_subtitle {
+    p {margin:0}
+    font-size: 17px;
+  }
+  .map {
+    padding: 2rem 0rem 0rem 0rem;
+    display: flex;
+    img {
+      object-fit: cover;
+      max-height: 428px;
+      max-width: 100%;
+    }
+  }
+}
+
+.team {
+  padding: 0rem 3rem;
+}
+
+.status {
+  padding: 5rem 3rem;
+
+}
+
+.footer {
+  padding: 3rem;
+  &_logo {
+    display: flex;
+    img {height: 50px;}
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  &_menu {
+    padding: 0rem 0rem 2rem 1rem;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .email {
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  .social_group {
+    padding: 0rem 0.6rem;
+    .social_item {
+      padding: 0;
+    }
+    .lab {
+      font-size: 46px;
+    }
+  }
+  .copyrights {
+    opacity: .75;
+    padding: 2rem 0rem 0rem 0rem;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:#dfdfdf;
+  border-radius: 10px;
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+  height: 6px;
+  border-radius: 8px;
+  border: 3px solid #4d4d4d;
+  --webkit-border-radius: 1ex;
+  --webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+
+
+@media (min-width: 320px) {
+  .project {
+    .wrapper {
+      height: 650px;
+      grid-auto-rows: 240px;
+
+      grid-template-columns: 222px 222px 222px 222px 222px;
+      grid-template-rows: auto auto;
+      grid-template-areas: "box-1 box-2 box-3 box-4 box-5"
+                           "box-6 box-7 box-8 box-9 box-10";
+    }
+    .box_content {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .project {
+    .box_content {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    .box_content {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .project {
+    .wrapper {
+      height: 500px;
+      grid-auto-rows: 240px;
+
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;//50% 50% 20% 60% 20%;
+      grid-template-rows: 240px 240px auto;
+      grid-template-areas: "box-1 box-1 box-2 box-2 box-3"
+                          "box-4 box-5 box-5 box-6 box-6"
+                          "box-7 box-7 box-8 box-9 box-10";
+    }
+    .box_content {
+      font-size: 18px;
+    }
+  }
+  
+  
+}

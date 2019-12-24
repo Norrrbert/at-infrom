@@ -1,0 +1,36 @@
+doctype html
+<html lang="ru">
+head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
+  title at-inform
+
+  link(rel="stylesheet" href="css/style.css")
+  link(rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css")
+
+<body>
+  header(id="header" class="hidden-navbar fixed-top" :class="{'header': showNavbar}")
+    .row
+      .col-sm-auto
+        a.header_logo(href="#")
+          .logo_img
+            img(src="img/logo.png")
+          .logo_title.py-2.px-3
+            h4 АТ-ИНФОРМ
+      .col-sm-auto.col-md.flex-shrink-1
+        .row
+          .col-sm-12.col-md.flex-shrink-1
+            nav(nav navbar-expand-lg)
+              ul.nav
+                li.nav-item
+                  a.nav-link(href="#") Обучение
+                li.nav-item
+                  a.nav-link(href="#") Сопровождение
+                li.nav-item
+                  a.nav-link(href="#") Продажа
+          .col-sm-12.col-md-auto
+            .header_contact.text-right
+              p.contact_phone +7 342 214-24-39 
+              p.contact_status <b>&#9679;</b>  сейчас {{work}}
